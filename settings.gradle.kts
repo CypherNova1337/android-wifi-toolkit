@@ -20,5 +20,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "MobileOps"
+rootProject.name = "VoidWave"
 include(":app")
