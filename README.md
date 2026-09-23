@@ -1,4 +1,4 @@
-# MobileOps
+# VoidWave
 
 An Android toolkit for WiFi and network security assessment, built around one principle: **never
 claim a capability the hardware will not actually give up.**
@@ -14,7 +14,7 @@ app. No monitor mode means no raw 802.11 frame capture, no handshake capture, no
 regardless of how the app is written. Tools that claim otherwise on a stock phone are either
 wrong or quietly doing nothing.
 
-So MobileOps sorts every capability into tiers, probes the device at launch, and shows you an
+So VoidWave sorts every capability into tiers, probes the device at launch, and shows you an
 honest picture of what this handset can do *before* you rely on it in the field.
 
 | Tier | Requires | Capabilities |
@@ -73,7 +73,7 @@ root, and they carry what actually decides whether a weakness is exploitable:
 The single most useful thing a stock Android device can do, and it needs no root at all.
 
 `VpnService` hands any app that holds `BIND_VPN_SERVICE` a TUN interface with the system route
-table pointed at it. MobileOps is not tunnelling anywhere — it reads each packet off the TUN,
+table pointed at it. VoidWave is not tunnelling anywhere — it reads each packet off the TUN,
 writes it to a pcap, and forwards it onward itself through sockets excluded from the VPN route.
 
 That forwarding is why `core/capture/` contains a userspace TCP implementation. The device's own
